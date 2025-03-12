@@ -29,7 +29,7 @@ namespace Popitka1
             var login = tbLog.Text;
             var password = tbPass.Text;
 
-            string quertystring = $"insert into Practika1(Login, Password) values('{login}', '{password}')";
+            string quertystring = $"insert into dbo.Account(Login, Password) values('{login}', '{password}')";
 
             SqlCommand command = new SqlCommand(quertystring, database.getConnection());
 
@@ -47,7 +47,7 @@ namespace Popitka1
                 MessageBox.Show("Nety");
             }
             database.closeConnection();
-
+           
         }
         private Boolean checkUser()
         {
@@ -58,13 +58,22 @@ namespace Popitka1
 
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
-            string quertystring = $"select ID, Login, Password from Practika1 where Login = '{login}' and Password = '{password}'";
+            string quertystring = $"SELECT ID, Login, Password FROM dbo.Account WHERE Login = '{login}' AND Password = '{password}'"; ;
 
             SqlCommand command = new SqlCommand(quertystring, database.getConnection());
 
             adapter.SelectCommand = command;
-            adapter.Fill(table);
-            if(table.Rows.Count > 0)
+            database.openConnection(); //Открывать подключение *после* создания SqlCommand
+            try
+            {
+                adapter.Fill(table);
+            }
+            finally
+            {
+                database.closeConnection(); //Всегда закрывать соединение в блоке finally
+            }
+
+            if (table.Rows.Count > 0)
             {
                 MessageBox.Show("User exist!");
                 return true;
