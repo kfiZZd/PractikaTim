@@ -63,6 +63,16 @@ namespace Popitka1.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3916599 {
+            get {
+                object obj = ResourceManager.GetObject("3916599", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _3917032 {
             get {
                 object obj = ResourceManager.GetObject("3917032", resourceCulture);
@@ -73,9 +83,29 @@ namespace Popitka1.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3917061 {
+            get {
+                object obj = ResourceManager.GetObject("3917061", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _3917104 {
             get {
                 object obj = ResourceManager.GetObject("3917104", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _3917293 {
+            get {
+                object obj = ResourceManager.GetObject("3917293", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +126,16 @@ namespace Popitka1.Properties {
         internal static System.Drawing.Bitmap _3917717 {
             get {
                 object obj = ResourceManager.GetObject("3917717", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap discover {
+            get {
+                object obj = ResourceManager.GetObject("discover", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
