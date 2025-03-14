@@ -103,9 +103,39 @@ namespace Popitka1.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3917195 {
+            get {
+                object obj = ResourceManager.GetObject("3917195", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _3917293 {
             get {
                 object obj = ResourceManager.GetObject("3917293", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _3917411 {
+            get {
+                object obj = ResourceManager.GetObject("3917411", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _3917549 {
+            get {
+                object obj = ResourceManager.GetObject("3917549", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

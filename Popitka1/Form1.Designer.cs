@@ -103,7 +103,7 @@
             this.label3.Margin = new System.Windows.Forms.Padding(3);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.label3.Size = new System.Drawing.Size(528, 66);
+            this.label3.Size = new System.Drawing.Size(540, 66);
             this.label3.TabIndex = 8;
             this.label3.Text = "Авторизация";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
