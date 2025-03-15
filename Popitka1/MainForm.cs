@@ -161,6 +161,7 @@ namespace Popitka1
                 MessageBox.Show("Запрос был отмечен как выполненный!!", "Успех!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 deleteRow();
                 UpdateTable();
+                ClearFields();
             }
             else
             {
@@ -377,14 +378,32 @@ namespace Popitka1
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            deleteRow();
-            UpdateTable();
+            DialogResult dialogResult = MessageBox.Show("Удалить выбранный запрос?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                deleteRow();
+                UpdateTable();
+                ClearFields();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+
+            }
         }
 
         private void btnDelete2_Click(object sender, EventArgs e)
         {
-            deleteRow2();
-            UpdateTable2();
+            DialogResult dialogResult = MessageBox.Show("Удалить выбранный запрос?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                deleteRow2();
+                UpdateTable2();
+                ClearFields2();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+
+            }
         }
 
         private void Change()
@@ -429,12 +448,30 @@ namespace Popitka1
         {
             Change();
             UpdateTable();
+            ClearFields();
         }
 
         private void btnEdit2_Click(object sender, EventArgs e)
         {
             Change2();
             UpdateTable2();
+            ClearFields2();
+        }
+        private void ClearFields()
+        {
+            tbID.Text = "";
+            tbTexnika.Text = "";
+            tbZav.Text = "";
+            tbPolomka.Text = "";
+            tbPrice.Text = "";
+        }
+        private void ClearFields2()
+        {
+            tbID2.Text = "";
+            tbTexnika2.Text = "";
+            tbZav2.Text = "";
+            tbPolomka2.Text = "";
+            tbPrice2.Text = "";
         }
     }
     
