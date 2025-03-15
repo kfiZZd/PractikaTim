@@ -108,7 +108,7 @@ namespace Popitka1
         {
             dgw.Rows.Clear();
 
-            string searchstring = $"select * from Zapros where concat (ID, Texnika, Polomka, Prositel, Price) like '%" + tbSearch.Text + "%'";
+            string searchstring = $"select * from Zapros where concat (ID, Texnika, Polomka, Prositel) like '%" + tbSearch.Text + "%'";
 
             SqlCommand com = new SqlCommand(searchstring, dataBase.getConnection());
 
@@ -159,7 +159,8 @@ namespace Popitka1
                 command.ExecuteNonQuery();
 
                 MessageBox.Show("Запрос был отмечен как выполненный!!", "Успех!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                deleteRow();
+                UpdateTable();
             }
             else
             {
@@ -167,6 +168,7 @@ namespace Popitka1
             }
 
             dataBase.closeConnection();
+
         }
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -309,13 +311,10 @@ namespace Popitka1
         private void btnDelete_Click(object sender, EventArgs e)
         {
             deleteRow();
-            
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
             UpdateTable();
         }
+
+       
     }
     
 }
