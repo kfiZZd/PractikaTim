@@ -301,11 +301,78 @@ namespace Popitka1
                         var command = new SqlCommand(deleteQuery, dataBase.getConnection());
                         command.ExecuteNonQuery();
                     }
-                
+                if(rowState == RowState.Modified)
+                {
+                    var ID = dataGridView1.Rows[index].Cells[0].Value.ToString();
+                    var Texn = dataGridView1.Rows[index].Cells[1].Value.ToString();
+                    var Polomka = dataGridView1.Rows[index].Cells[2].Value.ToString();
+                    var Zav = dataGridView1.Rows[index].Cells[3].Value.ToString();
+
+                    var changeQuery = $"update Zapros set Texnika = '{Texn}', Polomka = '{Polomka}', Prositel = '{Zav}' where ID = '{ID}'";
+
+                    var command = new SqlCommand(changeQuery, dataBase.getConnection());
+                    command.ExecuteNonQuery();
+
+                }
             }
 
             dataBase.closeConnection();
             
+        }
+        private void deleteRow2()
+        {
+            int index = dataGridView2.CurrentCell.RowIndex;
+
+            dataGridView2.Rows[index].Visible = false;
+
+            if (dataGridView2.Rows[index].Cells[0].Value.ToString() == string.Empty)
+            {
+                dataGridView2.Rows[index].Cells[5].Value = RowState.Deleted;
+
+                return;
+            }
+            dataGridView2.Rows[index].Cells[5].Value = RowState.Deleted;
+        }
+
+        private void UpdateTable2()
+        {
+            dataBase.openConnection();
+
+            for (int index = 0; index < dataGridView2.Rows.Count; index++)
+            {
+                var rowState = (RowState)dataGridView2.Rows[index].Cells[5].Value;
+
+                if (rowState == RowState.Existed)
+                    continue;
+
+
+                if (rowState == RowState.Deleted)
+                {
+                    var ID = Convert.ToInt32(dataGridView2.Rows[index].Cells[0].Value);
+                    var deleteQuery = $"delete from Complited where ID = {ID}";
+
+                    var command = new SqlCommand(deleteQuery, dataBase.getConnection());
+                    command.ExecuteNonQuery();
+                }
+                if (rowState == RowState.Modified)
+                {
+                    var ID = dataGridView2.Rows[index].Cells[0].Value.ToString();
+                    var Texn = dataGridView2.Rows[index].Cells[1].Value.ToString();
+                    var Polomka = dataGridView2.Rows[index].Cells[2].Value.ToString();
+                    var Zav = dataGridView2.Rows[index].Cells[3].Value.ToString();
+                    var Price = dataGridView2.Rows[index].Cells[4].Value.ToString();
+
+                    var changeQuery = $"update Complited set Texnika = '{Texn}', Polomka = '{Polomka}', Prositel = '{Zav}', Price = '{Price}' where ID = '{ID}'";
+
+                    var command = new SqlCommand(changeQuery, dataBase.getConnection());
+                    command.ExecuteNonQuery();
+
+                }
+
+            }
+
+            dataBase.closeConnection();
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -314,7 +381,61 @@ namespace Popitka1
             UpdateTable();
         }
 
-       
+        private void btnDelete2_Click(object sender, EventArgs e)
+        {
+            deleteRow2();
+            UpdateTable2();
+        }
+
+        private void Change()
+        {
+            var selectedRowIndex = dataGridView1.CurrentCell.RowIndex;
+
+            var ID = tbID.Text;
+            var Texn = tbTexnika.Text;
+            var Zav = tbZav.Text;
+            var Polom = tbPolomka.Text;
+
+            dataGridView1.Rows[selectedRowIndex].SetValues(ID, Texn, Polom, Zav);
+            dataGridView1.Rows[selectedRowIndex].Cells[4].Value = RowState.Modified;
+
+        }
+        private void Change2()
+        {
+            var selectedRowIndex = dataGridView2.CurrentCell.RowIndex;
+
+            var ID = tbID2.Text;
+            var Texn = tbTexnika2.Text;
+            var Zav = tbZav2.Text;
+            var Polom = tbPolomka2.Text;
+            int Price;
+
+            if (dataGridView2.Rows[selectedRowIndex].Cells[0].Value.ToString() != string.Empty)
+            {
+                if (int.TryParse(tbPrice2.Text, out Price))
+                {
+                    dataGridView2.Rows[selectedRowIndex].SetValues(ID, Texn, Polom, Zav, Price);
+                    dataGridView2.Rows[selectedRowIndex].Cells[5].Value = RowState.Modified;
+                }
+                else
+                {
+                    MessageBox.Show("Цена должна быть числом!!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            Change();
+            UpdateTable();
+        }
+
+        private void btnEdit2_Click(object sender, EventArgs e)
+        {
+            Change2();
+            UpdateTable2();
+        }
     }
     
 }

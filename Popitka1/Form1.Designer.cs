@@ -35,18 +35,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.pbClosePas = new System.Windows.Forms.PictureBox();
             this.pbShowPas = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pbClosePas = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClosePas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbShowPas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbClosePas)).BeginInit();
             this.SuspendLayout();
             // 
             // tbPass
             // 
             this.tbPass.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPass.Location = new System.Drawing.Point(242, 194);
+            this.tbPass.MaxLength = 50;
             this.tbPass.Multiline = true;
             this.tbPass.Name = "tbPass";
             this.tbPass.PasswordChar = '*';
@@ -57,6 +58,7 @@
             // 
             this.tbLog.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLog.Location = new System.Drawing.Point(242, 129);
+            this.tbLog.MaxLength = 50;
             this.tbLog.Multiline = true;
             this.tbLog.Name = "tbLog";
             this.tbLog.Size = new System.Drawing.Size(170, 36);
@@ -120,10 +122,24 @@
             this.linkLabel1.Text = "Создать аккаунт";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // pbClosePas
+            // 
+            this.pbClosePas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.pbClosePas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbClosePas.Image = global::Popitka1.Properties.Resources._3917104;
+            this.pbClosePas.Location = new System.Drawing.Point(418, 203);
+            this.pbClosePas.Name = "pbClosePas";
+            this.pbClosePas.Size = new System.Drawing.Size(20, 18);
+            this.pbClosePas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbClosePas.TabIndex = 11;
+            this.pbClosePas.TabStop = false;
+            this.pbClosePas.Click += new System.EventHandler(this.pbClosePas_Click);
+            // 
             // pbShowPas
             // 
             this.pbShowPas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pbShowPas.Image = global::Popitka1.Properties.Resources._3917104;
+            this.pbShowPas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbShowPas.Image = global::Popitka1.Properties.Resources._3917116;
             this.pbShowPas.Location = new System.Drawing.Point(418, 203);
             this.pbShowPas.Name = "pbShowPas";
             this.pbShowPas.Size = new System.Drawing.Size(20, 18);
@@ -144,18 +160,6 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // pbClosePas
-            // 
-            this.pbClosePas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pbClosePas.Image = global::Popitka1.Properties.Resources._3917104;
-            this.pbClosePas.Location = new System.Drawing.Point(418, 203);
-            this.pbClosePas.Name = "pbClosePas";
-            this.pbClosePas.Size = new System.Drawing.Size(20, 18);
-            this.pbClosePas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbClosePas.TabIndex = 11;
-            this.pbClosePas.TabStop = false;
-            this.pbClosePas.Click += new System.EventHandler(this.pbClosePas_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -175,9 +179,9 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pbClosePas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbShowPas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbClosePas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

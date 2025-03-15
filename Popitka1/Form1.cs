@@ -46,7 +46,7 @@ namespace Popitka1
             }
             else
             {
-                MessageBox.Show("Неверный логин или пароль!!");
+                MessageBox.Show("Неверный логин или пароль!!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

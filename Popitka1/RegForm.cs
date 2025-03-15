@@ -37,14 +37,14 @@ namespace Popitka1
 
             if(command.ExecuteNonQuery() == 1)
             {
-                MessageBox.Show("Аккаунт был успешно создан!", "Регистрация");
+                MessageBox.Show("Аккаунт был успешно создан!", "Успех!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Form1 frm_form1 = new Form1();
                 this.Close();
                 frm_form1.Show();
             }
             else
             {
-                MessageBox.Show("Nety");
+                MessageBox.Show("Не удалось создать аккаунт.", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             database.closeConnection();
            
@@ -63,19 +63,19 @@ namespace Popitka1
             SqlCommand command = new SqlCommand(quertystring, database.getConnection());
 
             adapter.SelectCommand = command;
-            database.openConnection(); //Открывать подключение *после* создания SqlCommand
+            database.openConnection(); 
             try
             {
                 adapter.Fill(table);
             }
             finally
             {
-                database.closeConnection(); //Всегда закрывать соединение в блоке finally
+                database.closeConnection(); 
             }
 
             if (table.Rows.Count > 0)
             {
-                MessageBox.Show("User exist!");
+                MessageBox.Show("Аккаунт уже существует.", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return true;
             }
             else

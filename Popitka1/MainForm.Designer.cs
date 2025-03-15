@@ -57,8 +57,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pbDelete2 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnDelete2 = new System.Windows.Forms.Button();
+            this.btnEdit2 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.tbPolomka2 = new System.Windows.Forms.TextBox();
             this.tbZav2 = new System.Windows.Forms.TextBox();
@@ -189,6 +189,7 @@
             this.btnEdit.TabIndex = 20;
             this.btnEdit.Text = "Изменить";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
@@ -400,8 +401,8 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.pbDelete2);
-            this.tabPage2.Controls.Add(this.button5);
-            this.tabPage2.Controls.Add(this.button6);
+            this.tabPage2.Controls.Add(this.btnDelete2);
+            this.tabPage2.Controls.Add(this.btnEdit2);
             this.tabPage2.Controls.Add(this.pictureBox4);
             this.tabPage2.Controls.Add(this.tbPolomka2);
             this.tabPage2.Controls.Add(this.tbZav2);
@@ -443,29 +444,31 @@
             this.pbDelete2.Visible = false;
             this.pbDelete2.Click += new System.EventHandler(this.pbDelete2_Click);
             // 
-            // button5
+            // btnDelete2
             // 
-            this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(628, 565);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(124, 32);
-            this.button5.TabIndex = 45;
-            this.button5.Text = "Удалить";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnDelete2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDelete2.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnDelete2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnDelete2.Location = new System.Drawing.Point(628, 565);
+            this.btnDelete2.Name = "btnDelete2";
+            this.btnDelete2.Size = new System.Drawing.Size(124, 32);
+            this.btnDelete2.TabIndex = 45;
+            this.btnDelete2.Text = "Удалить";
+            this.btnDelete2.UseVisualStyleBackColor = true;
+            this.btnDelete2.Click += new System.EventHandler(this.btnDelete2_Click);
             // 
-            // button6
+            // btnEdit2
             // 
-            this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.Location = new System.Drawing.Point(628, 519);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(124, 32);
-            this.button6.TabIndex = 44;
-            this.button6.Text = "Изменить";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnEdit2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEdit2.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnEdit2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnEdit2.Location = new System.Drawing.Point(628, 519);
+            this.btnEdit2.Name = "btnEdit2";
+            this.btnEdit2.Size = new System.Drawing.Size(124, 32);
+            this.btnEdit2.TabIndex = 44;
+            this.btnEdit2.Text = "Изменить";
+            this.btnEdit2.UseVisualStyleBackColor = true;
+            this.btnEdit2.Click += new System.EventHandler(this.btnEdit2_Click);
             // 
             // pictureBox4
             // 
@@ -700,8 +703,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pbDelete;
         private System.Windows.Forms.PictureBox pbDelete2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnDelete2;
+        private System.Windows.Forms.Button btnEdit2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.TextBox tbPolomka2;
         private System.Windows.Forms.TextBox tbZav2;
