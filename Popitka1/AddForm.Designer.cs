@@ -165,6 +165,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
+            this.MaximumSize = new System.Drawing.Size(650, 400);
+            this.MinimumSize = new System.Drawing.Size(650, 400);
             this.Name = "AddForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddForm";

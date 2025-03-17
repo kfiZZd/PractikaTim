@@ -126,6 +126,8 @@
             this.Controls.Add(this.tbLog);
             this.Controls.Add(this.tbPass);
             this.Controls.Add(this.label3);
+            this.MaximumSize = new System.Drawing.Size(650, 400);
+            this.MinimumSize = new System.Drawing.Size(650, 400);
             this.Name = "RegForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegForm";

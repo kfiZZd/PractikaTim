@@ -22,14 +22,34 @@ namespace Popitka1
     }
     public partial class MainForm: Form
     {
+        private readonly CheckUser _user;
+
         DataBase dataBase = new DataBase();
 
         int selectedRow;
 
-        public MainForm()
+        public MainForm(CheckUser user)
         {
-            
+
+            _user = user;
             InitializeComponent();
+        }
+
+        private void IsAdmin()
+        {
+            btnEdit.Enabled = _user.IsAdmin;
+            btnDelete.Enabled = _user.IsAdmin;
+            btnComplete.Enabled = _user.IsAdmin;
+            if (_user.IsAdmin == true)
+            {
+                tabPage2.Parent = tabControl1;
+            }
+            else if (_user.IsAdmin == false)
+            {
+                tabPage2.Parent = null;
+            }
+            //tabControl1.Enabled = _user.IsAdmin;
+
         }
 
        private void CreateColumns()
@@ -69,6 +89,8 @@ namespace Popitka1
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            tbUserStatus.Text = $"{_user.Login}: {_user.Status}";
+            IsAdmin();
             CreateColumns();
             CreateColumns2();
             RefreshDataGrid(dataGridView1);

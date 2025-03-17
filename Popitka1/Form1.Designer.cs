@@ -176,6 +176,8 @@
             this.Controls.Add(this.tbPass);
             this.Controls.Add(this.label3);
             this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.MaximumSize = new System.Drawing.Size(650, 400);
+            this.MinimumSize = new System.Drawing.Size(650, 400);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

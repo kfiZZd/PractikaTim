@@ -29,7 +29,7 @@ namespace Popitka1
             var login = tbLog.Text;
             var password = tbPass.Text;
 
-            string quertystring = $"insert into dbo.Account(Login, Password) values('{login}', '{password}')";
+            string quertystring = $"insert into dbo.Account(Login, Password, Administrator) values('{login}', '{password}', 0)";
 
             SqlCommand command = new SqlCommand(quertystring, database.getConnection());
 
@@ -58,7 +58,7 @@ namespace Popitka1
 
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
-            string quertystring = $"SELECT ID, Login, Password FROM dbo.Account WHERE Login = '{login}' AND Password = '{password}'"; ;
+            string quertystring = $"SELECT ID, Login, Password, Administrator FROM dbo.Account WHERE Login = '{login}' AND Password = '{password}'"; ;
 
             SqlCommand command = new SqlCommand(quertystring, database.getConnection());
 

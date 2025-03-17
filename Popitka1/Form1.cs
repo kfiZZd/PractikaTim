@@ -29,7 +29,7 @@ namespace Popitka1
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
 
-            string querystring = $"select ID, Login, Password from Account where Login = '{login}' and Password = '{password}'";
+            string querystring = $"select ID, Login, Password, Administrator from Account where Login = '{login}' and Password = '{password}'";
 
             SqlCommand command = new SqlCommand(querystring, database.getConnection());
 
@@ -38,11 +38,15 @@ namespace Popitka1
 
             if(table.Rows.Count == 1)
             {
+                var user = new CheckUser(table.Rows[0].ItemArray[1].ToString(), Convert.ToBoolean(table.Rows[0].ItemArray[3]));
+
                 MessageBox.Show("Вы успешно вошли!", "Вход", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MainForm mainForm = new MainForm();
+                MainForm mainForm = new MainForm(user);
                 this.Hide();
                 mainForm.ShowDialog();
                 this.Show();
+                tbLog.Text = "";
+                tbPass.Text = "";
             }
             else
             {

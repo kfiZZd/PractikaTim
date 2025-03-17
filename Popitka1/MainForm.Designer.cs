@@ -31,11 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pbDelete = new System.Windows.Forms.PictureBox();
             this.btnComplete = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tbPolomka = new System.Windows.Forms.TextBox();
             this.tbZav = new System.Windows.Forms.TextBox();
             this.tbPrice = new System.Windows.Forms.TextBox();
@@ -47,13 +49,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pbRefresh = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pbDelete2 = new System.Windows.Forms.PictureBox();
             this.btnDelete2 = new System.Windows.Forms.Button();
             this.btnEdit2 = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.tbPolomka2 = new System.Windows.Forms.TextBox();
             this.tbZav2 = new System.Windows.Forms.TextBox();
             this.tbPrice2 = new System.Windows.Forms.TextBox();
@@ -65,30 +71,25 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.pbRefresh2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.tbSearch2 = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label17 = new System.Windows.Forms.Label();
-            this.pbDelete = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pbRefresh = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pbDelete2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pbRefresh2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.tbUserStatus = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRefresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelete2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRefresh2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -104,6 +105,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.tbUserStatus);
             this.tabPage1.Controls.Add(this.pbDelete);
             this.tabPage1.Controls.Add(this.btnComplete);
             this.tabPage1.Controls.Add(this.btnDelete);
@@ -137,12 +139,27 @@
             this.tabPage1.Text = "Входящие запросы";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // pbDelete
+            // 
+            this.pbDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbDelete.BackColor = System.Drawing.Color.LightGray;
+            this.pbDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbDelete.Image = global::Popitka1.Properties.Resources._3917195;
+            this.pbDelete.Location = new System.Drawing.Point(896, 14);
+            this.pbDelete.Name = "pbDelete";
+            this.pbDelete.Size = new System.Drawing.Size(24, 24);
+            this.pbDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbDelete.TabIndex = 23;
+            this.pbDelete.TabStop = false;
+            this.pbDelete.Visible = false;
+            this.pbDelete.Click += new System.EventHandler(this.pbDelete_Click);
+            // 
             // btnComplete
             // 
             this.btnComplete.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnComplete.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnComplete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnComplete.Location = new System.Drawing.Point(677, 609);
+            this.btnComplete.Location = new System.Drawing.Point(691, 602);
             this.btnComplete.Name = "btnComplete";
             this.btnComplete.Size = new System.Drawing.Size(124, 32);
             this.btnComplete.TabIndex = 22;
@@ -155,7 +172,7 @@
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnDelete.Location = new System.Drawing.Point(677, 570);
+            this.btnDelete.Location = new System.Drawing.Point(691, 563);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(124, 32);
             this.btnDelete.TabIndex = 21;
@@ -168,7 +185,7 @@
             this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnEdit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnEdit.Location = new System.Drawing.Point(677, 531);
+            this.btnEdit.Location = new System.Drawing.Point(691, 524);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(124, 32);
             this.btnEdit.TabIndex = 20;
@@ -181,7 +198,7 @@
             this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAdd.Location = new System.Drawing.Point(677, 492);
+            this.btnAdd.Location = new System.Drawing.Point(691, 485);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(124, 32);
             this.btnAdd.TabIndex = 19;
@@ -193,11 +210,21 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(668, 457);
+            this.label8.Location = new System.Drawing.Point(682, 450);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(139, 21);
             this.label8.TabIndex = 17;
             this.label8.Text = "Редактирование";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Popitka1.Properties.Resources._3916599;
+            this.pictureBox3.Location = new System.Drawing.Point(43, 461);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(38, 31);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 16;
+            this.pictureBox3.TabStop = false;
             // 
             // tbPolomka
             // 
@@ -309,6 +336,31 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Запись:";
             // 
+            // pbRefresh
+            // 
+            this.pbRefresh.BackColor = System.Drawing.Color.LightGray;
+            this.pbRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbRefresh.Image = global::Popitka1.Properties.Resources._3917293;
+            this.pbRefresh.Location = new System.Drawing.Point(643, 11);
+            this.pbRefresh.Name = "pbRefresh";
+            this.pbRefresh.Size = new System.Drawing.Size(29, 31);
+            this.pbRefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbRefresh.TabIndex = 4;
+            this.pbRefresh.TabStop = false;
+            this.pbRefresh.Click += new System.EventHandler(this.pbRefresh_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BackColor = System.Drawing.Color.LightGray;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(686, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(29, 31);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // tbSearch
             // 
             this.tbSearch.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -346,9 +398,9 @@
             // 
             this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(632, 483);
+            this.label9.Location = new System.Drawing.Point(666, 476);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(213, 165);
+            this.label9.Size = new System.Drawing.Size(174, 165);
             this.label9.TabIndex = 18;
             // 
             // tabPage2
@@ -382,12 +434,27 @@
             this.tabPage2.Text = "Выполненные запросы";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // pbDelete2
+            // 
+            this.pbDelete2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbDelete2.BackColor = System.Drawing.Color.LightGray;
+            this.pbDelete2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbDelete2.Image = global::Popitka1.Properties.Resources._3917195;
+            this.pbDelete2.Location = new System.Drawing.Point(896, 14);
+            this.pbDelete2.Name = "pbDelete2";
+            this.pbDelete2.Size = new System.Drawing.Size(24, 24);
+            this.pbDelete2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbDelete2.TabIndex = 47;
+            this.pbDelete2.TabStop = false;
+            this.pbDelete2.Visible = false;
+            this.pbDelete2.Click += new System.EventHandler(this.pbDelete2_Click);
+            // 
             // btnDelete2
             // 
             this.btnDelete2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDelete2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnDelete2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnDelete2.Location = new System.Drawing.Point(628, 565);
+            this.btnDelete2.Location = new System.Drawing.Point(628, 576);
             this.btnDelete2.Name = "btnDelete2";
             this.btnDelete2.Size = new System.Drawing.Size(124, 32);
             this.btnDelete2.TabIndex = 45;
@@ -400,13 +467,23 @@
             this.btnEdit2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEdit2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnEdit2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnEdit2.Location = new System.Drawing.Point(628, 519);
+            this.btnEdit2.Location = new System.Drawing.Point(628, 530);
             this.btnEdit2.Name = "btnEdit2";
             this.btnEdit2.Size = new System.Drawing.Size(124, 32);
             this.btnEdit2.TabIndex = 44;
             this.btnEdit2.Text = "Изменить";
             this.btnEdit2.UseVisualStyleBackColor = true;
             this.btnEdit2.Click += new System.EventHandler(this.btnEdit2_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Popitka1.Properties.Resources._3916599;
+            this.pictureBox4.Location = new System.Drawing.Point(155, 461);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(38, 31);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 40;
+            this.pictureBox4.TabStop = false;
             // 
             // tbPolomka2
             // 
@@ -518,6 +595,31 @@
             this.label16.TabIndex = 29;
             this.label16.Text = "Запись:";
             // 
+            // pbRefresh2
+            // 
+            this.pbRefresh2.BackColor = System.Drawing.Color.LightGray;
+            this.pbRefresh2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbRefresh2.Image = global::Popitka1.Properties.Resources._3917293;
+            this.pbRefresh2.Location = new System.Drawing.Point(643, 11);
+            this.pbRefresh2.Name = "pbRefresh2";
+            this.pbRefresh2.Size = new System.Drawing.Size(29, 31);
+            this.pbRefresh2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbRefresh2.TabIndex = 28;
+            this.pbRefresh2.TabStop = false;
+            this.pbRefresh2.Click += new System.EventHandler(this.pbRefresh2_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox6.BackColor = System.Drawing.Color.LightGray;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(686, 11);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(29, 31);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 27;
+            this.pictureBox6.TabStop = false;
+            // 
             // tbSearch2
             // 
             this.tbSearch2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -550,112 +652,24 @@
             this.label17.Text = "Выполненные запросы";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pbDelete
+            // tbUserStatus
             // 
-            this.pbDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pbDelete.BackColor = System.Drawing.Color.LightGray;
-            this.pbDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbDelete.Image = global::Popitka1.Properties.Resources._3917195;
-            this.pbDelete.Location = new System.Drawing.Point(896, 14);
-            this.pbDelete.Name = "pbDelete";
-            this.pbDelete.Size = new System.Drawing.Size(24, 24);
-            this.pbDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbDelete.TabIndex = 23;
-            this.pbDelete.TabStop = false;
-            this.pbDelete.Visible = false;
-            this.pbDelete.Click += new System.EventHandler(this.pbDelete_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Popitka1.Properties.Resources._3916599;
-            this.pictureBox3.Location = new System.Drawing.Point(43, 461);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(38, 31);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 16;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pbRefresh
-            // 
-            this.pbRefresh.BackColor = System.Drawing.Color.LightGray;
-            this.pbRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbRefresh.Image = global::Popitka1.Properties.Resources._3917293;
-            this.pbRefresh.Location = new System.Drawing.Point(643, 11);
-            this.pbRefresh.Name = "pbRefresh";
-            this.pbRefresh.Size = new System.Drawing.Size(29, 31);
-            this.pbRefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbRefresh.TabIndex = 4;
-            this.pbRefresh.TabStop = false;
-            this.pbRefresh.Click += new System.EventHandler(this.pbRefresh_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackColor = System.Drawing.Color.LightGray;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(686, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 31);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pbDelete2
-            // 
-            this.pbDelete2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pbDelete2.BackColor = System.Drawing.Color.LightGray;
-            this.pbDelete2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbDelete2.Image = global::Popitka1.Properties.Resources._3917195;
-            this.pbDelete2.Location = new System.Drawing.Point(896, 14);
-            this.pbDelete2.Name = "pbDelete2";
-            this.pbDelete2.Size = new System.Drawing.Size(24, 24);
-            this.pbDelete2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbDelete2.TabIndex = 47;
-            this.pbDelete2.TabStop = false;
-            this.pbDelete2.Visible = false;
-            this.pbDelete2.Click += new System.EventHandler(this.pbDelete2_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Popitka1.Properties.Resources._3916599;
-            this.pictureBox4.Location = new System.Drawing.Point(155, 461);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(38, 31);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 40;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pbRefresh2
-            // 
-            this.pbRefresh2.BackColor = System.Drawing.Color.LightGray;
-            this.pbRefresh2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbRefresh2.Image = global::Popitka1.Properties.Resources._3917293;
-            this.pbRefresh2.Location = new System.Drawing.Point(643, 11);
-            this.pbRefresh2.Name = "pbRefresh2";
-            this.pbRefresh2.Size = new System.Drawing.Size(29, 31);
-            this.pbRefresh2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbRefresh2.TabIndex = 28;
-            this.pbRefresh2.TabStop = false;
-            this.pbRefresh2.Click += new System.EventHandler(this.pbRefresh2_Click);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox6.BackColor = System.Drawing.Color.LightGray;
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(686, 11);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(29, 31);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 27;
-            this.pictureBox6.TabStop = false;
+            this.tbUserStatus.Enabled = false;
+            this.tbUserStatus.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbUserStatus.Location = new System.Drawing.Point(195, 13);
+            this.tbUserStatus.Multiline = true;
+            this.tbUserStatus.Name = "tbUserStatus";
+            this.tbUserStatus.Size = new System.Drawing.Size(186, 25);
+            this.tbUserStatus.TabIndex = 24;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(943, 686);
+            this.ClientSize = new System.Drawing.Size(923, 628);
             this.Controls.Add(this.tabControl1);
+            this.MaximumSize = new System.Drawing.Size(939, 667);
+            this.MinimumSize = new System.Drawing.Size(939, 667);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
@@ -663,18 +677,18 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRefresh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelete2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRefresh2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -728,5 +742,6 @@
         private System.Windows.Forms.TextBox tbSearch2;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox tbUserStatus;
     }
 }
