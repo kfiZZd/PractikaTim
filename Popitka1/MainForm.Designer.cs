@@ -97,7 +97,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tabControl1.Location = new System.Drawing.Point(-1, 1);
+            this.tabControl1.Location = new System.Drawing.Point(-4, 1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(947, 695);
@@ -454,7 +454,7 @@
             this.btnDelete2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDelete2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnDelete2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnDelete2.Location = new System.Drawing.Point(628, 576);
+            this.btnDelete2.Location = new System.Drawing.Point(628, 562);
             this.btnDelete2.Name = "btnDelete2";
             this.btnDelete2.Size = new System.Drawing.Size(124, 32);
             this.btnDelete2.TabIndex = 45;
@@ -467,7 +467,7 @@
             this.btnEdit2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEdit2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnEdit2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnEdit2.Location = new System.Drawing.Point(628, 530);
+            this.btnEdit2.Location = new System.Drawing.Point(628, 516);
             this.btnEdit2.Name = "btnEdit2";
             this.btnEdit2.Size = new System.Drawing.Size(124, 32);
             this.btnEdit2.TabIndex = 44;
@@ -666,10 +666,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(923, 628);
+            this.ClientSize = new System.Drawing.Size(941, 684);
             this.Controls.Add(this.tabControl1);
-            this.MaximumSize = new System.Drawing.Size(939, 667);
-            this.MinimumSize = new System.Drawing.Size(939, 667);
+            this.MaximumSize = new System.Drawing.Size(957, 723);
+            this.MinimumSize = new System.Drawing.Size(957, 723);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";

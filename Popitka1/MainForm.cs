@@ -64,7 +64,7 @@ namespace Popitka1
 
         private void ReadSingleRow(DataGridView dgw, IDataRecord record)
         {
-            dgw.Rows.Add(record.GetInt32(0), record.GetString(1), record.GetString(2), record.GetString(3), /*record.GetInt32(4),*/ RowState.ModifiedNew);
+            dgw.Rows.Add(record.GetInt32(0), record.GetString(1), record.GetString(2), record.GetString(3), RowState.ModifiedNew);
 
         }
 
@@ -255,7 +255,7 @@ namespace Popitka1
         {
             dgw2.Rows.Clear();
 
-            string searchstring = $"select * from Complited where concat (ID, Texnika, Polomka, Prositel, Price) like '%" + tbSearch.Text + "%'";
+            string searchstring = $"select * from Complited where concat (ID, Texnika, Polomka, Prositel, Price) like '%" + tbSearch2.Text + "%'";
 
             SqlCommand com = new SqlCommand(searchstring, dataBase.getConnection());
 
@@ -265,7 +265,7 @@ namespace Popitka1
 
             while (read.Read())
             {
-                ReadSingleRow(dgw2, read);
+                ReadSingleRow2(dgw2, read);
 
             }
             read.Close();
@@ -273,7 +273,7 @@ namespace Popitka1
 
         private void tbSearch2_TextChanged(object sender, EventArgs e)
         {
-            if (tbSearch.Text.Length >= 1)
+            if (tbSearch2.Text.Length >= 1)
             {
                 pbDelete2.Visible = true;
             }
