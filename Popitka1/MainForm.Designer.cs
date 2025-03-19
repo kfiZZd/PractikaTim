@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tbUserStatus = new System.Windows.Forms.TextBox();
             this.pbDelete = new System.Windows.Forms.PictureBox();
             this.btnComplete = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -76,7 +77,6 @@
             this.tbSearch2 = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label17 = new System.Windows.Forms.Label();
-            this.tbUserStatus = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).BeginInit();
@@ -139,6 +139,16 @@
             this.tabPage1.Text = "Входящие запросы";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // tbUserStatus
+            // 
+            this.tbUserStatus.Enabled = false;
+            this.tbUserStatus.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbUserStatus.Location = new System.Drawing.Point(195, 13);
+            this.tbUserStatus.Multiline = true;
+            this.tbUserStatus.Name = "tbUserStatus";
+            this.tbUserStatus.Size = new System.Drawing.Size(186, 25);
+            this.tbUserStatus.TabIndex = 24;
+            // 
             // pbDelete
             // 
             this.pbDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -157,6 +167,7 @@
             // btnComplete
             // 
             this.btnComplete.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnComplete.Enabled = false;
             this.btnComplete.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnComplete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnComplete.Location = new System.Drawing.Point(691, 602);
@@ -170,6 +181,7 @@
             // btnDelete
             // 
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDelete.Enabled = false;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnDelete.Location = new System.Drawing.Point(691, 563);
@@ -183,6 +195,7 @@
             // btnEdit
             // 
             this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEdit.Enabled = false;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnEdit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnEdit.Location = new System.Drawing.Point(691, 524);
@@ -651,16 +664,6 @@
             this.label17.TabIndex = 25;
             this.label17.Text = "Выполненные запросы";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tbUserStatus
-            // 
-            this.tbUserStatus.Enabled = false;
-            this.tbUserStatus.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbUserStatus.Location = new System.Drawing.Point(195, 13);
-            this.tbUserStatus.Multiline = true;
-            this.tbUserStatus.Name = "tbUserStatus";
-            this.tbUserStatus.Size = new System.Drawing.Size(186, 25);
-            this.tbUserStatus.TabIndex = 24;
             // 
             // MainForm
             // 
