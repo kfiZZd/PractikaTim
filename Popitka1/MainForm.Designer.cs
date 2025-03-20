@@ -154,7 +154,7 @@
             this.pbDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbDelete.BackColor = System.Drawing.Color.LightGray;
             this.pbDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbDelete.Image = global::Popitka1.Properties.Resources._3917195;
+            this.pbDelete.Image = global::ARM.Properties.Resources._3917195;
             this.pbDelete.Location = new System.Drawing.Point(896, 14);
             this.pbDelete.Name = "pbDelete";
             this.pbDelete.Size = new System.Drawing.Size(24, 24);
@@ -231,7 +231,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::Popitka1.Properties.Resources._3916599;
+            this.pictureBox3.Image = global::ARM.Properties.Resources._3916599;
             this.pictureBox3.Location = new System.Drawing.Point(43, 461);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(38, 31);
@@ -353,7 +353,7 @@
             // 
             this.pbRefresh.BackColor = System.Drawing.Color.LightGray;
             this.pbRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbRefresh.Image = global::Popitka1.Properties.Resources._3917293;
+            this.pbRefresh.Image = global::ARM.Properties.Resources._3917293;
             this.pbRefresh.Location = new System.Drawing.Point(643, 11);
             this.pbRefresh.Name = "pbRefresh";
             this.pbRefresh.Size = new System.Drawing.Size(29, 31);
@@ -452,7 +452,7 @@
             this.pbDelete2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbDelete2.BackColor = System.Drawing.Color.LightGray;
             this.pbDelete2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbDelete2.Image = global::Popitka1.Properties.Resources._3917195;
+            this.pbDelete2.Image = global::ARM.Properties.Resources._3917195;
             this.pbDelete2.Location = new System.Drawing.Point(896, 14);
             this.pbDelete2.Name = "pbDelete2";
             this.pbDelete2.Size = new System.Drawing.Size(24, 24);
@@ -490,7 +490,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::Popitka1.Properties.Resources._3916599;
+            this.pictureBox4.Image = global::ARM.Properties.Resources._3916599;
             this.pictureBox4.Location = new System.Drawing.Point(155, 461);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(38, 31);
@@ -612,7 +612,7 @@
             // 
             this.pbRefresh2.BackColor = System.Drawing.Color.LightGray;
             this.pbRefresh2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbRefresh2.Image = global::Popitka1.Properties.Resources._3917293;
+            this.pbRefresh2.Image = global::ARM.Properties.Resources._3917293;
             this.pbRefresh2.Location = new System.Drawing.Point(643, 11);
             this.pbRefresh2.Name = "pbRefresh2";
             this.pbRefresh2.Size = new System.Drawing.Size(29, 31);
@@ -671,11 +671,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(941, 684);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(957, 723);
             this.MinimumSize = new System.Drawing.Size(957, 723);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MainForm";
+            this.Text = "АРМ";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

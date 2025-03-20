@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddForm));
             this.label3 = new System.Windows.Forms.Label();
             this.tbPolomka = new System.Windows.Forms.TextBox();
             this.tbZav = new System.Windows.Forms.TextBox();
@@ -129,7 +130,7 @@
             // 
             this.pbFillEMP.BackColor = System.Drawing.Color.Silver;
             this.pbFillEMP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbFillEMP.Image = global::Popitka1.Properties.Resources._3917411;
+            this.pbFillEMP.Image = global::ARM.Properties.Resources._3917411;
             this.pbFillEMP.Location = new System.Drawing.Point(563, 21);
             this.pbFillEMP.Name = "pbFillEMP";
             this.pbFillEMP.Size = new System.Drawing.Size(38, 39);
@@ -142,7 +143,7 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Popitka1.Properties.Resources._3917549;
+            this.pictureBox1.Image = global::ARM.Properties.Resources._3917549;
             this.pictureBox1.Location = new System.Drawing.Point(9, 9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(71, 63);
@@ -165,11 +166,12 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(650, 400);
             this.MinimumSize = new System.Drawing.Size(650, 400);
             this.Name = "AddForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddForm";
+            this.Text = "Запрос";
             ((System.ComponentModel.ISupportInitialize)(this.pbFillEMP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

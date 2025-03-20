@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Popitka1 {
+namespace ARM {
     
     
     /// <summary>
@@ -649,7 +649,7 @@ namespace Popitka1 {
         }
     }
 }
-namespace Popitka1.Practika1DataSetTableAdapters {
+namespace ARM.Practika1DataSetTableAdapters {
     
     
     /// <summary>
@@ -804,7 +804,7 @@ namespace Popitka1.Practika1DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Popitka1.Properties.Settings.Default.Practika1ConString;
+            this._connection.ConnectionString = global::ARM.Properties.Settings.Default.Practika1ConString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

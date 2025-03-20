@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tbPass = new System.Windows.Forms.TextBox();
             this.tbLog = new System.Windows.Forms.TextBox();
             this.btnEnter = new System.Windows.Forms.Button();
@@ -126,7 +127,7 @@
             // 
             this.pbClosePas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pbClosePas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbClosePas.Image = global::Popitka1.Properties.Resources._3917104;
+            this.pbClosePas.Image = global::ARM.Properties.Resources._3917104;
             this.pbClosePas.Location = new System.Drawing.Point(418, 203);
             this.pbClosePas.Name = "pbClosePas";
             this.pbClosePas.Size = new System.Drawing.Size(20, 18);
@@ -139,7 +140,7 @@
             // 
             this.pbShowPas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pbShowPas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbShowPas.Image = global::Popitka1.Properties.Resources._3917116;
+            this.pbShowPas.Image = global::ARM.Properties.Resources._3917116;
             this.pbShowPas.Location = new System.Drawing.Point(418, 203);
             this.pbShowPas.Name = "pbShowPas";
             this.pbShowPas.Size = new System.Drawing.Size(20, 18);
@@ -152,7 +153,7 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Popitka1.Properties.Resources._3917711;
+            this.pictureBox1.Image = global::ARM.Properties.Resources._3917711;
             this.pictureBox1.Location = new System.Drawing.Point(5, 9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(71, 63);
@@ -176,11 +177,12 @@
             this.Controls.Add(this.tbPass);
             this.Controls.Add(this.label3);
             this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(650, 400);
             this.MinimumSize = new System.Drawing.Size(650, 400);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Вход";
             ((System.ComponentModel.ISupportInitialize)(this.pbClosePas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbShowPas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

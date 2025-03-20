@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35825.156 d17.13
+VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Popitka1", "Popitka1\Popitka1.csproj", "{55D4C142-8D91-4658-8E6D-1E4C406B6284}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARM", "Popitka1\ARM.csproj", "{55D4C142-8D91-4658-8E6D-1E4C406B6284}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
